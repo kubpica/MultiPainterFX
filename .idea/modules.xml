@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaFxApplication.iml" filepath="$PROJECT_DIR$/JavaFxApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HelloJPro.iml" filepath="$PROJECT_DIR$/.idea/HelloJPro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultiPainterFX.iml" filepath="$PROJECT_DIR$/.idea/modules/MultiPainterFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultiPainterFX_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MultiPainterFX_main.iml" group="MultiPainterFX" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MultiPainterFX_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MultiPainterFX_test.iml" group="MultiPainterFX" />
     </modules>
   </component>
 </project>
-

@@ -1,4 +1,4 @@
-package application;
+package pl.jpranica.multipainterfx;
 
 import javafx.fxml.FXMLLoader;
 

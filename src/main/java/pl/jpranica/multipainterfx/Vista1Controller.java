@@ -1,4 +1,4 @@
-package application;
+package pl.jpranica.multipainterfx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
