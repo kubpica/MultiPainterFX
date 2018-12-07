@@ -1,0 +1,703 @@
+2018-12-03 00:42:40,446 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-12-03 00:42:41,011 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-03 00:42:41,011 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-03 00:42:41,011 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-03 00:42:41,073 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-03 00:42:41,073 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-03 00:42:41,105 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-03 00:42:41,148 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-03 00:42:41,827 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-03 00:42:41,948 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-03 00:42:41,997 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2018-12-03 00:42:42,034 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-03 00:42:42,034 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-03 00:42:42,039 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 3628m
+2018-12-03 00:42:42,585 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-03 00:42:44,337 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-03 00:42:46,127 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 00:42:46,219 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 00:42:46,222 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:42:46,222 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 00:42:46,222 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 00:42:46,763 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:43:41,788 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!default
+2018-12-03 00:43:41,789 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!default
+2018-12-03 00:43:41,789 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:43:41,789 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 00:43:41,789 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!default
+2018-12-03 00:43:41,814 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:45:19,820 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-12-03 00:45:20,002 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-03 00:45:20,002 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-03 00:45:20,002 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-03 00:45:20,010 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-03 00:45:20,010 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-03 00:45:20,028 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-03 00:45:20,049 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-03 00:45:20,408 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-03 00:45:20,459 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-03 00:45:20,739 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Mon Dec 03 00:45:20 CET 2018
+2018-12-03 00:45:20,789 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-03 00:45:20,789 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-03 00:45:20,789 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 3628m
+2018-12-03 00:45:20,907 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-03 00:45:21,406 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-03 00:45:22,178 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!default
+2018-12-03 00:45:22,190 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!default
+2018-12-03 00:45:22,193 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:45:22,193 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2018-12-03 00:45:22,193 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!default
+2018-12-03 00:45:22,430 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:45:55,376 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!default
+2018-12-03 00:45:55,378 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!default
+2018-12-03 00:45:55,378 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:45:55,378 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 00:45:55,378 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!default
+2018-12-03 00:45:55,417 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:45:57,005 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - application requested: 0!default
+2018-12-03 00:45:57,006 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - Creating Application: 0!default
+2018-12-03 00:45:57,007 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:45:57,007 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - host          localhost:8080
+2018-12-03 00:45:57,007 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - uri           /app/0!default
+2018-12-03 00:45:57,038 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:45:58,534 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!default
+2018-12-03 00:45:58,535 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!default
+2018-12-03 00:45:58,535 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:45:58,535 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 00:45:58,535 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!default
+2018-12-03 00:45:58,560 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:46:00,089 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!default
+2018-12-03 00:46:00,092 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!default
+2018-12-03 00:46:00,092 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:46:00,092 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 00:46:00,092 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!default
+2018-12-03 00:46:00,120 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 00:46:00,525 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - application requested: 0!default
+2018-12-03 00:46:00,526 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - Creating Application: 0!default
+2018-12-03 00:46:00,526 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 00:46:00,526 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - host          localhost:8080
+2018-12-03 00:46:00,526 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - uri           /app/0!default
+2018-12-03 00:46:00,557 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 01:16:25,676 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-12-03 01:16:25,907 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-03 01:16:25,907 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-03 01:16:25,907 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-03 01:16:25,916 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-03 01:16:25,916 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-03 01:16:25,932 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-03 01:16:25,954 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-03 01:16:26,282 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-03 01:16:26,317 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-03 01:16:26,474 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Mon Dec 03 01:16:26 CET 2018
+2018-12-03 01:16:26,478 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-03 01:16:26,478 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-03 01:16:26,484 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 3628m
+2018-12-03 01:16:26,669 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-03 01:16:27,230 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-03 01:16:28,435 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!default
+2018-12-03 01:16:28,449 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!default
+2018-12-03 01:16:28,455 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:16:28,455 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2018-12-03 01:16:28,455 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!default
+2018-12-03 01:16:28,720 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: Location is required.
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3207)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at pl.jpranica.multipainterfx.Main.start(Main.java:15)
+	at com.jpro.internal.config.ApplicationStarter$.startJApplication(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startApplication$2(ApplicationStarter.scala:114)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX(CoreTesting.scala:19)
+	at simplefx.cores.interfaces.parts.testing.CoreTesting.inFX$(CoreTesting.scala:16)
+	at simplefx.cores.standard.Core.inFX(Core.scala:9)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:112)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:95)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:61)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:26)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$4.$anonfun$applyOrElse$1(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:59)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.evaluateTasks$1(CoreTimeEvent.scala:41)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:49)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$484(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:506)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:490)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$404(QuantumToolkit.java:319)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 01:20:20,408 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-12-03 01:20:20,607 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-03 01:20:20,607 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-03 01:20:20,607 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-03 01:20:20,615 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-03 01:20:20,615 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-03 01:20:20,630 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-03 01:20:20,651 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-03 01:20:21,024 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-03 01:20:21,065 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-03 01:20:21,292 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Mon Dec 03 01:20:21 CET 2018
+2018-12-03 01:20:21,350 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-03 01:20:21,351 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-03 01:20:21,351 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 889m
+2018-12-03 01:20:21,517 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-03 01:20:22,046 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-03 01:20:43,718 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 01:20:43,728 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 01:20:43,731 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:20:43,732 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 01:20:43,732 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 01:20:44,383 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,com.jpro.hellojpro.HelloJProFXML,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-1711189469]
+2018-12-03 01:20:44,752 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 194 userid: 896449426
+2018-12-03 01:40:15,622 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:40:15,622 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 01:40:15,623 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 01:40:15 CET 2018      
+2018-12-03 01:40:15,623 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.026 
+2018-12-03 01:40:15,623 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.005  
+2018-12-03 01:40:15,623 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 01:40:15,624 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 01:40:15,624 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 12403582
+2018-12-03 01:40:15,624 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 5294608
+2018-12-03 01:40:15,624 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:40:15,776 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - application requested: 0!default
+2018-12-03 01:40:15,776 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - Creating Application: 0!default
+2018-12-03 01:40:15,777 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:40:15,777 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - host          localhost:8080
+2018-12-03 01:40:15,777 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - uri           /app/0!default
+2018-12-03 01:40:15,901 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,com.jpro.hellojpro.HelloJProFXML,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-11-2-actorRefSource#-635657915]
+2018-12-03 01:40:15,995 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 194 userid: 303973710
+2018-12-03 01:42:56,817 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-12-03 01:42:57,031 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-03 01:42:57,032 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-03 01:42:57,032 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-03 01:42:57,042 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-03 01:42:57,042 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-03 01:42:57,057 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-03 01:42:57,079 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-03 01:42:57,430 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-03 01:42:57,477 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-03 01:42:57,649 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Mon Dec 03 01:42:57 CET 2018
+2018-12-03 01:42:57,699 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-03 01:42:57,700 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-03 01:42:57,700 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 889m
+2018-12-03 01:42:57,873 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-03 01:42:58,444 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-03 01:43:03,221 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 657245927!default
+2018-12-03 01:43:03,232 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 657245927!default
+2018-12-03 01:43:03,235 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:43:03,236 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2018-12-03 01:43:03,236 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/657245927!default
+2018-12-03 01:43:03,530 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 01:43:03,532 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 01:43:03,532 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:43:03,532 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 01:43:03,532 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 01:43:04,098 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-9-2-actorRefSource#-229241770]
+2018-12-03 01:43:04,339 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 01:43:04,471 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 1849347821
+2018-12-03 01:43:04,487 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 01:44:04,523 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:44:04,523 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 01:44:04,524 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 01:44:04 CET 2018      
+2018-12-03 01:44:04,524 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.016 
+2018-12-03 01:44:04,524 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2018-12-03 01:44:04,524 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 01:44:04,532 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 01:44:04,532 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 1122249
+2018-12-03 01:44:04,532 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 294904
+2018-12-03 01:44:04,532 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:44:04,606 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 01:44:04,606 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 01:44:04,607 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:44:04,607 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 01:44:04,607 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 01:44:04,673 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-14-2-actorRefSource#1596785415]
+2018-12-03 01:44:04,691 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 01:44:04,790 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 936278731
+2018-12-03 01:44:04,822 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 01:44:29,582 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 01:45:21 CET 2018      
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 821217
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 216485
+2018-12-03 01:45:21,896 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 01:45:21,967 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!default
+2018-12-03 01:45:21,967 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!default
+2018-12-03 01:45:21,967 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:45:21,967 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2018-12-03 01:45:21,967 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!default
+2018-12-03 01:45:22,020 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-21-2-actorRefSource#1369382591]
+2018-12-03 01:45:22,033 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 01:45:22,137 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 1899453202
+2018-12-03 01:45:22,153 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 01:45:52,378 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-03 01:49:45,541 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 01:49:45,542 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 01:49:45,542 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 01:49:45,542 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 01:49:45,542 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 01:49:45,610 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-27-2-actorRefSource#875124215]
+2018-12-03 01:49:45,625 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 01:49:45,754 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 1086735164
+2018-12-03 01:49:45,786 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 02:24:06,427 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 02:24:06 CET 2018      
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 1315609
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 339805
+2018-12-03 02:24:06,428 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:06,515 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!default
+2018-12-03 02:24:06,516 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!default
+2018-12-03 02:24:06,516 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:06,516 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2018-12-03 02:24:06,516 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!default
+2018-12-03 02:24:06,582 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-33-2-actorRefSource#88688180]
+2018-12-03 02:24:06,593 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 02:24:06,717 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 90841245
+2018-12-03 02:24:06,749 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 02:24:08,046 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:08,046 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 02:24:08 CET 2018      
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.012 
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.012  
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 48627
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 10468
+2018-12-03 02:24:08,047 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:08,113 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - application requested: 0!default
+2018-12-03 02:24:08,113 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - Creating Application: 0!default
+2018-12-03 02:24:08,113 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:08,113 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - host          localhost:8080
+2018-12-03 02:24:08,113 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - uri           /app/0!default
+2018-12-03 02:24:08,159 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-38-2-actorRefSource#697939979]
+2018-12-03 02:24:08,169 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 02:24:08,286 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 543917993
+2018-12-03 02:24:08,302 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 02:24:13,534 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-03 02:24:17,347 [WARN] from controllers.jpro in application-akka.actor.default-dispatcher-5 - jpro.plainFile - Couldn't get resource for: 'jpro/html/test'
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 02:24:17 CET 2018      
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.016 
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 80419
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 18712
+2018-12-03 02:24:17,375 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:17,401 [WARN] from controllers.jpro in application-akka.actor.default-dispatcher-8 - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2018-12-03 02:24:18,710 [WARN] from controllers.jpro in application-akka.actor.default-dispatcher-2 - jpro.plainFile - Couldn't get resource for: 'jpro/html/test'
+2018-12-03 02:24:19,826 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!default
+2018-12-03 02:24:19,826 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!default
+2018-12-03 02:24:19,826 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:19,826 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2018-12-03 02:24:19,826 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!default
+2018-12-03 02:24:19,865 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-46-2-actorRefSource#-1083407068]
+2018-12-03 02:24:19,874 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 02:24:19,994 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 515732702
+2018-12-03 02:24:20,010 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 02:24:21,641 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 03 02:24:21 CET 2018      
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.004 
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.007  
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 40419
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 9123
+2018-12-03 02:24:21,642 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-03 02:24:21,698 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - application requested: 0!fullscreen
+2018-12-03 02:24:21,698 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - Creating Application: 0!fullscreen
+2018-12-03 02:24:21,699 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:21,699 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - host          localhost:8080
+2018-12-03 02:24:21,699 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - uri           /app/0!fullscreen
+2018-12-03 02:24:21,734 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen,http://localhost:8080/app/fullscreen,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-50-2-actorRefSource#1779332940]
+2018-12-03 02:24:21,744 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-03 02:24:21,862 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 1680252630
+2018-12-03 02:24:21,878 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-03 02:24:25,415 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-03 02:24:27,207 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-03 02:24:35,640 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!default
+2018-12-03 02:24:35,641 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!default
+2018-12-03 02:24:35,641 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:35,641 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 02:24:35,641 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!default
+2018-12-03 02:24:38,792 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - application requested: 0!instances
+2018-12-03 02:24:38,793 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - Creating Application: 0!instances
+2018-12-03 02:24:38,793 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:38,793 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - host          localhost:8080
+2018-12-03 02:24:38,793 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-10 - uri           /app/0!instances
+2018-12-03 02:24:40,045 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - application requested: 0!multipainterfx
+2018-12-03 02:24:40,046 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - Creating Application: 0!multipainterfx
+2018-12-03 02:24:40,046 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:40,046 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - host          localhost:8080
+2018-12-03 02:24:40,046 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-5 - uri           /app/0!multipainterfx
+2018-12-03 02:24:40,985 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - application requested: 0!stats
+2018-12-03 02:24:40,985 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - Creating Application: 0!stats
+2018-12-03 02:24:40,985 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:40,985 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - host          localhost:8080
+2018-12-03 02:24:40,985 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - uri           /app/0!stats
+2018-12-03 02:24:41,846 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - application requested: 0!instances
+2018-12-03 02:24:41,846 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - Creating Application: 0!instances
+2018-12-03 02:24:41,846 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:41,846 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - host          localhost:8080
+2018-12-03 02:24:41,846 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-9 - uri           /app/0!instances
+2018-12-03 02:24:42,360 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!default
+2018-12-03 02:24:42,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!default
+2018-12-03 02:24:42,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:42,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 02:24:42,361 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!default
+2018-12-03 02:24:43,979 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!stats
+2018-12-03 02:24:43,979 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!stats
+2018-12-03 02:24:43,979 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:43,979 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 02:24:43,979 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!stats
+2018-12-03 02:24:45,082 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - application requested: 0!multipainterfx
+2018-12-03 02:24:45,082 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - Creating Application: 0!multipainterfx
+2018-12-03 02:24:45,082 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-03 02:24:45,082 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - host          localhost:8080
+2018-12-03 02:24:45,082 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-8 - uri           /app/0!multipainterfx
+2018-12-06 19:22:52,324 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2018-12-06 19:22:52,772 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-06 19:22:52,772 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-06 19:22:52,773 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 7
+2018-12-06 19:22:52,797 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-06 19:22:52,797 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_141 Oracle Corporation
+2018-12-06 19:22:52,853 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-06 19:22:52,889 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-06 19:22:53,333 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-06 19:22:53,422 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-06 19:22:53,723 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Thu Dec 06 19:22:53 CET 2018
+2018-12-06 19:22:54,134 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-06 19:22:54,134 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_141
+2018-12-06 19:22:54,134 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 889m
+2018-12-06 19:22:54,286 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-06 19:22:55,556 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2018-12-06 19:23:05,036 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - application requested: 0!default
+2018-12-06 19:23:05,074 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - Creating Application: 0!default
+2018-12-06 19:23:05,077 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - remoteAddress 0:0:0:0:0:0:0:1
+2018-12-06 19:23:05,077 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - host          localhost:8080
+2018-12-06 19:23:05,078 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - uri           /app/0!default
+2018-12-06 19:23:06,089 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(default,pl.jpranica.multipainterfx.Paint,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/test/fullscreen/default,http://localhost:8080/app/default,1920.0,938.0,false,pl-PL,List(pl-PL, pl, en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-8-2-actorRefSource#-826908240]
+2018-12-06 19:23:06,430 [ERROR] from com.jpro.meta.stream.FXSerializerImpl in JavaFX Application Thread - couldn't wrap node ... class: javafx.scene.canvas.Canvas ... javafx.scene.Node
+2018-12-06 19:23:06,666 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 992 userid: 738321568
+2018-12-06 19:23:06,698 [WARN] from com.jpro.JS in JavaFX Application Thread - received msg: unimplemented node type: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node)(token: UnknownPart(NodePart(OwnExtension(id: 958,id: 959,id: 960,id: 961,None,id: 962,id: 963),id: 964,id: 965,id: 966,id: 967,id: 968,id: 969,id: 970,id: 971,id: 972,id: 973,id: 974,id: 975,id: 976,id: 977),class: javafx.scene.canvas.Canvas ... javafx.scene.Node))
+2018-12-06 19:23:15,051 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-06 19:23:15,051 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2018-12-06 19:23:15,052 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Thu Dec 06 19:23:15 CET 2018      
+2018-12-06 19:23:15,052 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2018-12-06 19:23:15,052 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2018-12-06 19:23:15,052 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 390233
+2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 88222
+2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2018-12-06 19:23:23,215 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
