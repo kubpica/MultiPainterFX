@@ -1,34 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?scenebuilder-stylesheet vista.css?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?scenebuilder-stylesheet vista.css?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.jpranica.multipainterfx.MainController">
+<BorderPane prefHeight="420.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
 <top>
-    <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-            <Menu mnemonicParsing="false" text="File">
-                <items>
-                    <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#closeAppAction" text="Close" />
-                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                </items>
-            </Menu>
-        </menus>
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="Save" onAction="#onSave" />
+            <MenuItem text="Exit" onAction="#onExit" />
+        </Menu>
     </MenuBar>
 </top>
 <center>
-    <Label fx:id="headerLabel" maxWidth="1.7976931348623157E308" text="Header" VBox.vgrow="NEVER" />
-    <StackPane fx:id="vistaHolder" VBox.vgrow="ALWAYS" />
+    <StackPane fx:id="vistaHolder" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <StackPane fx:id="vistaEvent">
+            <children>
+                <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Accordion prefHeight="374.0" prefWidth="165.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                                    <panes>
+                                        <TitledPane fx:id="eventsPane" animated="false" text="Wydarzenia">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvEvents" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="contestantsPane" animated="false" text="Zawodnicy">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvContestants" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="teamsPane" animated="false" text="Drużyny">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvTeams" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="matchesPane" animated="false" text="Mecze">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvMatches" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="arenasPane" animated="false" text="Areny">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvArenas" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                        <TitledPane fx:id="usersPane" animated="false" text="Organizatorzy">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="lvUsers" layoutX="-1.0" layoutY="-3.0" prefHeight="301.0" prefWidth="164.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </panes>
+                                </Accordion>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="431.0">
+                            <children>
+                                <TabPane fx:id="tbpane" layoutY="-2.0" prefHeight="375.0" prefWidth="390.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-2.0">
+                                    <tabs>
+                                    </tabs>
+                                </TabPane>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+        </StackPane>
+    </StackPane>
 </center>
 </BorderPane>
-

@@ -1,6 +1,5 @@
 package pl.jpranica.multipainterfx;
 
-import com.jpro.hellojpro.HelloJProFXMLController;
 import com.jpro.webapi.JProApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,7 +19,7 @@ public class Paint extends JProApplication
     public void start(Stage stage)
     {
         //load user interface as FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/jpro/hellojpro/fxml/paint.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_PAINT));
 
         Scene scene = null;
         try

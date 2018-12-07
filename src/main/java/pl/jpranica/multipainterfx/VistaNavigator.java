@@ -15,9 +15,7 @@ public class VistaNavigator {
     /**
      * Convenience constants for fxml layouts managed by the navigator.
      */
-    public static final String MAIN    = "/application/main.fxml";
-    public static final String VISTA_1 = "/application/vista1.fxml";
-    public static final String VISTA_2 = "/application/vista2.fxml";
+    public static final String VISTA_PAINT = "/pl/jpranica/multipainterfx/fxml/paint.fxml";
 
     /** The main application layout controller. */
     private static MainController mainController;
@@ -48,15 +46,14 @@ public class VistaNavigator {
      *
      * @param fxml the fxml file to be loaded.
      */
-    public static void loadVista(String fxml) {
+    public static void loadVista(String fxml, VistaContainer vc) {
         try {
-            mainController.setVista(
-                FXMLLoader.load(
-                    VistaNavigator.class.getResource(
-                        fxml
-                    )
-                )
-            );
+            FXMLLoader loader = new FXMLLoader(VistaNavigator.class.getResource(fxml));
+            vc.setVista( loader.load() );
+
+            VistaContainable child = loader.getController();
+            child.setParent(vc);
+            child.init();
         } catch (IOException e) {
             e.printStackTrace();
         }

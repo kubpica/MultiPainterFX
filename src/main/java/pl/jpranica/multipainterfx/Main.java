@@ -3,18 +3,60 @@ package pl.jpranica.multipainterfx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
+import java.io.IOException;
+
 public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("com/jpro/hellojpro/fxml/paint.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/pl/jpranica/multipainterfx/fxml/paint.fxml"))));
         stage.setTitle("Paint App");
         stage.show();
+    }
+
+    /**
+     * Loads the main fxml layout.
+     * Sets up the vista switching VistaNavigator.
+     * Loads the first vista into the fxml layout.
+     *
+     * @return the loaded pane.
+     * @throws IOException if the pane could not be loaded.
+     */
+    private Pane loadMainPane() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+
+        Pane mainPane = (Pane) loader.load(
+                getClass().getResourceAsStream(
+                        VistaNavigator.MAIN
+                )
+        );
+
+        MainController mainController = loader.getController();
+        VistaNavigator.loadVista(VistaNavigator.VISTA_FEDERATION, mainController);
+
+        return mainPane;
+    }
+
+    /**
+     * Creates the main application scene.
+     *
+     * @param mainPane the main application layout.
+     *
+     * @return the created scene.
+     */
+    private Scene createScene(Pane mainPane) {
+        Scene scene = new Scene(
+                mainPane
+        );
+
+        scene.getStylesheets().setAll(
+                getClass().getResource("/application/vista.css").toExternalForm()
+        );
+
+        return scene;
     }
 
     public static void main(String[] args) {

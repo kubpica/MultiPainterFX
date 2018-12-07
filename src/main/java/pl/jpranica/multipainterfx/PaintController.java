@@ -3,6 +3,7 @@ package pl.jpranica.multipainterfx;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.CheckBox;
@@ -12,28 +13,35 @@ import javafx.scene.image.Image;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
-public class PaintController {
+public class PaintController implements VistaContainable {
+    @FXML private Canvas canvas;
+    @FXML private ColorPicker colorPicker;
+    @FXML private TextField brushSize;
+    @FXML private CheckBox eraser;
+    private VistaContainer parent;
+    private Brushstroke bs;
 
-    @FXML
-    private Canvas canvas;
+    public PaintController(VistaContainer parent){
+        this.parent = parent;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_PAINT));
+        loader.setController(this);
+        try {
+            parent.setVista(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.init();
+    }
 
-    @FXML
-    private ColorPicker colorPicker;
-
-    @FXML
-    private TextField brushSize;
-
-    @FXML
-    private CheckBox eraser;
-
-    Brushstroke bs;
-
-    public void initialize() {
+    @Override
+    public void setParent(VistaContainer parent) {
+        this.parent = parent;
+    }
+    @Override
+    public void init() {
         GraphicsContext g = canvas.getGraphicsContext2D();
 
         canvas.setOnMousePressed(e -> {
