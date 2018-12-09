@@ -23,6 +23,11 @@ public class PaintController implements VistaContainable {
     @FXML private CheckBox eraser;
     private VistaContainer parent;
     private Brushstroke bs;
+    private GraphicsContext gc;
+
+    public GraphicsContext getGraphicsContext() {
+        return gc;
+    }
 
     public PaintController(VistaContainer parent){
         this.parent = parent;
@@ -42,7 +47,7 @@ public class PaintController implements VistaContainable {
     }
     @Override
     public void init() {
-        GraphicsContext g = canvas.getGraphicsContext2D();
+        gc = canvas.getGraphicsContext2D();
 
         canvas.setOnMousePressed(e -> {
             System.out.println("pressed");
@@ -53,10 +58,10 @@ public class PaintController implements VistaContainable {
             double y = e.getY() - size / 2;
 
             if (eraser.isSelected()) {
-                g.clearRect(x, y, size, size);
+                gc.clearRect(x, y, size, size);
             } else {
-                g.setFill(colorPicker.getValue());
-                g.fillRect(x, y, size, size);
+                gc.setFill(colorPicker.getValue());
+                gc.fillRect(x, y, size, size);
             }
         });
 
@@ -69,16 +74,16 @@ public class PaintController implements VistaContainable {
             double y = e.getY() - size / 2;
 
             if (eraser.isSelected()) {
-                g.clearRect(x, y, size, size);
+                gc.clearRect(x, y, size, size);
             } else {
-                g.setFill(colorPicker.getValue());
-                g.fillRect(x, y, size, size);
+                gc.setFill(colorPicker.getValue());
+                gc.fillRect(x, y, size, size);
             }
         });
 
         canvas.setOnMouseReleased(e -> {
             System.out.println("released");
-            bs.recreate(g);
+            bs.recreate(gc);
         });
 
         System.out.println(canvas.getWidth() + " " + canvas.getHeight());

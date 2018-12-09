@@ -19,14 +19,15 @@ public class Paint extends JProApplication
     public void start(Stage stage)
     {
         //load user interface as FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_PAINT));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_MAIN));
+        System.out.println(loader.getLocation());
 
         Scene scene = null;
         try
         {
             Parent root = loader.load();
-            PaintController controller = loader.getController();
-            //controller.init(this);
+            MainController controller = loader.getController();
+            controller.init();
 
             //create JavaFX scene
             scene = new Scene(root);

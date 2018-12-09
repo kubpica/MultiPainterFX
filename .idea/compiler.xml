@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="HelloJPro_main" target="1.8" />
       <module name="HelloJPro_test" target="1.8" />
+      <module name="MultiPainterFX.main" target="1.8" />
+      <module name="MultiPainterFX.test" target="1.8" />
       <module name="MultiPainterFX_main" target="1.8" />
       <module name="MultiPainterFX_test" target="1.8" />
     </bytecodeTargetLevel>

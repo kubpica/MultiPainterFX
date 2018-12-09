@@ -12,8 +12,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/pl/jpranica/multipainterfx/fxml/paint.fxml"))));
+        /*stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(VistaNavigator.VISTA_PAINT))));
         stage.setTitle("Paint App");
+        stage.show();*/
+
+        stage.setTitle("MultiPainterFX");
+
+        stage.setScene(
+                createScene(
+                        loadMainPane()
+                )
+        );
+
         stage.show();
     }
 
@@ -30,12 +40,12 @@ public class Main extends Application {
 
         Pane mainPane = (Pane) loader.load(
                 getClass().getResourceAsStream(
-                        VistaNavigator.MAIN
+                        VistaNavigator.VISTA_MAIN
                 )
         );
 
-        MainController mainController = loader.getController();
-        VistaNavigator.loadVista(VistaNavigator.VISTA_FEDERATION, mainController);
+        //MainController mainController = loader.getController();
+        //VistaNavigator.loadVista(VistaNavigator.VISTA_FEDERATION, mainController);
 
         return mainPane;
     }
@@ -53,7 +63,7 @@ public class Main extends Application {
         );
 
         scene.getStylesheets().setAll(
-                getClass().getResource("/application/vista.css").toExternalForm()
+                getClass().getResource("/pl/jpranica/multipainterfx/vista.css").toExternalForm()
         );
 
         return scene;

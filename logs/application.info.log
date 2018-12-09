@@ -701,3 +701,92 @@ java.lang.NullPointerException: Location is required.
 2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 88222
 2018-12-06 19:23:15,056 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
 2018-12-06 19:23:23,215 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2018-12-09 21:18:06,830 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2018-12-09 21:18:07,072 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-09 21:18:07,072 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-09 21:18:07,072 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2018-12-09 21:18:07,083 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-09 21:18:07,083 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_191 Oracle Corporation
+2018-12-09 21:18:07,100 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-09 21:18:07,138 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-09 21:18:07,760 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-09 21:18:07,829 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-09 21:18:08,133 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Sun Dec 09 21:18:07 CET 2018
+2018-12-09 21:18:08,214 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-09 21:18:08,214 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_191
+2018-12-09 21:18:08,214 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 966m
+2018-12-09 21:18:08,350 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-09 21:18:09,091 [ERROR] from akka.io.TcpListener in application-akka.actor.default-dispatcher-2 - Bind failed for TCP channel on endpoint [/0.0.0.0:8080]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:56)
+	at akka.io.TcpListener.<init>(TcpListener.scala:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at akka.util.Reflect$.instantiate(Reflect.scala:66)
+	at akka.actor.ArgsReflectConstructor.produce(IndirectActorProducer.scala:96)
+	at akka.actor.Props.newActor(Props.scala:212)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:624)
+	at akka.actor.ActorCell.create(ActorCell.scala:650)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:523)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:545)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:283)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-12-09 21:18:09,103 [WARN] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro prevent System.exit
+2018-12-09 21:19:42,534 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2018-12-09 21:19:42,778 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - calling init!
+2018-12-09 21:19:42,778 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2018-12-09 21:19:42,778 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2018-12-09 21:19:42,791 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2018.1.9
+2018-12-09 21:19:42,791 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_191 Oracle Corporation
+2018-12-09 21:19:42,805 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2018-12-09 21:19:42,843 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2018-12-09 21:19:43,242 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2018-12-09 21:19:43,298 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2018-12-09 21:19:43,572 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Imported chart data Sun Dec 09 21:19:43 CET 2018
+2018-12-09 21:19:43,627 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - System-Infos: 
+2018-12-09 21:19:43,627 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - javaversion: 1.8.0_191
+2018-12-09 21:19:43,627 [INFO] from com.jpro.internal.stats.ServerInfo$ in JavaFX Application Thread - max ram    : 966m
+2018-12-09 21:19:43,798 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2018-12-09 21:19:44,613 [ERROR] from akka.io.TcpListener in application-akka.actor.default-dispatcher-5 - Bind failed for TCP channel on endpoint [/0.0.0.0:8080]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at akka.io.TcpListener.liftedTree1$1(TcpListener.scala:56)
+	at akka.io.TcpListener.<init>(TcpListener.scala:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at akka.util.Reflect$.instantiate(Reflect.scala:66)
+	at akka.actor.ArgsReflectConstructor.produce(IndirectActorProducer.scala:96)
+	at akka.actor.Props.newActor(Props.scala:212)
+	at akka.actor.ActorCell.newActor(ActorCell.scala:624)
+	at akka.actor.ActorCell.create(ActorCell.scala:650)
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:523)
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:545)
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:283)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2018-12-09 21:19:44,626 [WARN] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro prevent System.exit
+2018-12-09 21:34:57,266 [WARN] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - fxCPU_RAMCPU was NaN
+2018-12-09 22:11:39,675 [WARN] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - fxCPU_RAMCPU was NaN
+2018-12-09 22:57:33,842 [WARN] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - fxCPU_RAMCPU was NaN

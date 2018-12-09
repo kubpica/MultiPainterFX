@@ -5,11 +5,13 @@ import java.io.*;
 import java.net.Socket;
 
 //
-public class ClientThread extends Thread{
+public class RemoteCanvasThread extends Thread{
 	private Socket socket;
+	private PaintController pc;
 
-	public ClientThread(Socket socket) {
-		this.socket=socket;
+	public RemoteCanvasThread(Socket socket, PaintController pc) {
+		this.socket = socket;
+		this.pc = pc;
 	}
 
 	public void run() {
@@ -20,13 +22,13 @@ public class ClientThread extends Thread{
             while (ois.available()>0){
                 try {
                     Brushstroke bs = (Brushstroke)ois.readObject();
-                    bs.r
+                    bs.recreate(pc.getGraphicsContext());
                 } catch (ClassNotFoundException e) {
                     System.out.println("Class not found.");
                 }
             }
 
-            if(crs!=null)System.out.println("Successfully downloaded table "+tableName);
+            /*if(crs!=null)System.out.println("Successfully downloaded table " + tableName);
 
 			String message=null;
 			BufferedReader bufferedReader = new BufferedReader ( new InputStreamReader(socket.getInputStream()));
@@ -44,7 +46,7 @@ public class ClientThread extends Thread{
                     os.close();
 					
 				}
-			}
+			}*/
 		} catch (IOException e) {
 			System.out.println("Connection lost.");
 		}

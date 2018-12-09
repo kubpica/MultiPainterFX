@@ -16,18 +16,8 @@ public class VistaNavigator {
      * Convenience constants for fxml layouts managed by the navigator.
      */
     public static final String VISTA_PAINT = "/pl/jpranica/multipainterfx/fxml/paint.fxml";
-
-    /** The main application layout controller. */
-    private static MainController mainController;
-
-    /**
-     * Stores the main controller for later use in navigation tasks.
-     *
-     * @param mainController the main application layout controller.
-     */
-    public static void setMainController(MainController mainController) {
-        VistaNavigator.mainController = mainController;
-    }
+    public static final String VISTA_MAIN = "/pl/jpranica/multipainterfx/fxml/main.fxml";
+    public static final String VISTA_HOLDER = "/pl/jpranica/multipainterfx/fxml/vistaHolder.fxml";
 
     /**
      * Loads the vista specified by the fxml file into the
