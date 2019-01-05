@@ -19,6 +19,8 @@ import javafx.scene.layout.StackPane;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.IOException;
+import java.net.Socket;
 
 /**
  * Main controller class for the entire layout.
@@ -41,6 +43,7 @@ public class MainController extends VistaContainer {
             public void invalidated(Observable observable) {
                 if(tpLocalCanvas.isExpanded()){
                     ObservableList<String> ols = FXCollections.observableArrayList();
+                    ols.add("** Dodaj **");
                     ols.add("Płótno");
                     lvLocalCanvas.setItems(ols);
                 }else {
@@ -53,11 +56,60 @@ public class MainController extends VistaContainer {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 String s = lvLocalCanvas.getSelectionModel().getSelectedItem();
+                if(s==null)
+                    return;
 
                 TabController tabCtrl = new TabController(s);
                 tbpane.getTabs().add(tabCtrl.getTab());
-                PaintController pc = new PaintController(tabCtrl);
-                //RemoteCanvasThread rct = new RemoteCanvasThread();
+
+                if(s=="** Dodaj **"){
+                    try {
+                        //Start server
+                        Server server = Dialogs.host();
+                        server.start();
+
+                        //Connect
+                        ServerConnection sc = new ServerConnection( new Socket("localhost", server.getServerPort()) );
+                        PaintController pc = new PaintController(tabCtrl, sc);
+                        new RemoteCanvasThread(sc, pc).start();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        });
+
+        tpRemoteCanvas.expandedProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if(tpRemoteCanvas.isExpanded()){
+                    ObservableList<String> ols = FXCollections.observableArrayList();
+                    ols.add("** Dodaj **");
+                    ols.add("Płótno");
+                    lvRemoteCanvas.setItems(ols);
+                }else {
+                    lvRemoteCanvas.getSelectionModel().clearSelection();
+                }
+            }
+        });
+
+        lvRemoteCanvas.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                String s = lvRemoteCanvas.getSelectionModel().getSelectedItem();
+                if(s==null)
+                    return;
+
+                TabController tabCtrl = new TabController(s);
+                tbpane.getTabs().add(tabCtrl.getTab());
+
+                if(s=="** Dodaj **"){
+                    ServerConnection sc = Dialogs.connect();
+                    PaintController pc = new PaintController(tabCtrl, sc);
+                    new RemoteCanvasThread(sc, pc).start();
+                }
+
             }
         });
     }

@@ -3,9 +3,10 @@ package pl.jpranica.multipainterfx;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
-class Position {
+class Position implements Serializable {
     private final int x;
     private final int y;
 
@@ -23,14 +24,14 @@ class Position {
     }
 }
 
-public class Brushstroke {
-    private Paint paint;
+public class Brushstroke implements Serializable {
+    private SerializableColor paint;
     private double size;
     private Position startPoint;
     private LinkedList<Position> path = new LinkedList<Position>();
     private Position endPoint;
 
-    public Brushstroke(int x, int y, Paint paint, double size){
+    public Brushstroke(int x, int y, SerializableColor paint, double size){
         startPoint = new Position(x, y);
         endPoint = startPoint;
         this.paint = paint;
@@ -45,7 +46,7 @@ public class Brushstroke {
     }
 
     public void recreate(GraphicsContext g){
-        g.setFill(paint);
+        g.setFill(paint.getFXColor());
 
         double x = startPoint.getX() - size / 2;
         double y = startPoint.getY() - size / 2;

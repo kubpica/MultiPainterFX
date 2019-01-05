@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Paint extends JProApplication
+public class Painter extends JProApplication
 {
     public static void main(String[] args)
     {

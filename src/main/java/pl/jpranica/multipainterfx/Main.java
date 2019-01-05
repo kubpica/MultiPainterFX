@@ -44,8 +44,8 @@ public class Main extends Application {
                 )
         );
 
-        //MainController mainController = loader.getController();
-        //VistaNavigator.loadVista(VistaNavigator.VISTA_FEDERATION, mainController);
+        MainController mainController = loader.getController();
+        mainController.init();
 
         return mainPane;
     }
@@ -63,7 +63,7 @@ public class Main extends Application {
         );
 
         scene.getStylesheets().setAll(
-                getClass().getResource("/pl/jpranica/multipainterfx/vista.css").toExternalForm()
+                getClass().getResource("/pl/jpranica/multipainterfx/css/vista.css").toExternalForm()
         );
 
         return scene;

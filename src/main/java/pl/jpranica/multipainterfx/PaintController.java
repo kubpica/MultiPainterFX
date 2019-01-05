@@ -24,12 +24,14 @@ public class PaintController implements VistaContainable {
     private VistaContainer parent;
     private Brushstroke bs;
     private GraphicsContext gc;
+    private ServerConnection connection;
 
     public GraphicsContext getGraphicsContext() {
         return gc;
     }
 
-    public PaintController(VistaContainer parent){
+    public PaintController(VistaContainer parent, ServerConnection connection){
+        this.connection = connection;
         this.parent = parent;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_PAINT));
         loader.setController(this);
@@ -51,7 +53,7 @@ public class PaintController implements VistaContainable {
 
         canvas.setOnMousePressed(e -> {
             System.out.println("pressed");
-            bs = new Brushstroke((int)e.getX(), (int)e.getY(), colorPicker.getValue(),Double.parseDouble(brushSize.getText()));
+            bs = new Brushstroke((int)e.getX(), (int)e.getY(), new SerializableColor(colorPicker.getValue()), Double.parseDouble(brushSize.getText()));
 
             double size = Double.parseDouble(brushSize.getText());
             double x = e.getX() - size / 2;
@@ -83,7 +85,13 @@ public class PaintController implements VistaContainable {
 
         canvas.setOnMouseReleased(e -> {
             System.out.println("released");
-            bs.recreate(gc);
+            try {
+                connection.sendBrushstroke(bs);
+            } catch (IOException ex) {
+                // TODO Auto-generated catch block
+                ex.printStackTrace();
+            }
+            //bs.recreate(gc);
         });
 
         System.out.println(canvas.getWidth() + " " + canvas.getHeight());
