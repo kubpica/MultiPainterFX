@@ -17,8 +17,11 @@ public class ServerConnection {
 	}
 
 	public void sendBrushstroke(Brushstroke bs) throws IOException{
-	    System.out.println("Wysylam");
 		oos.writeObject(bs);
+	}
+
+	public void sendPoint(CanvasHistoricalPoint point) throws IOException{
+		oos.writeObject(point);
 	}
 
 	public Socket getSocket() {

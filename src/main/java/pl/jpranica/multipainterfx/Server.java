@@ -4,16 +4,18 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Server extends Thread {
 	private int serverPort;
-	private ArrayList<ServerConnection> connections = new ArrayList<ServerConnection>();
+	private ArrayList<ServerConnection> connections = new ArrayList<>();
+	private LinkedList<CanvasHistoricalPoint> history = new LinkedList<>();
 
+    public Server() {
+        this(4545);
+    }
 	public Server(int port) {
-		serverPort = port;
-	}
-	public Server() {
-		serverPort = 4545;
+		this.serverPort = port;
 	}
 
 	public int getServerPort() {
@@ -21,11 +23,26 @@ public class Server extends Thread {
 	}
 
 	public void sendBrushstroke(Brushstroke bs) throws IOException{
-	    System.out.println("server send bs");
 		for(ServerConnection sc : connections){
 			sc.sendBrushstroke(bs);
 		}
 	}
+
+	public void sendPoint(CanvasHistoricalPoint point) throws IOException{
+        for(ServerConnection sc : connections){
+            sc.sendPoint(point);
+        }
+    }
+
+	public void addToHistory(CanvasHistoricalPoint point){
+	    history.add(point);
+    }
+
+    public void resendHistory(ServerConnection connection) throws IOException{
+        for(CanvasHistoricalPoint point : history){
+            connection.sendPoint(point);
+        }
+    }
 
 	public void run(){
 		try {

@@ -10,6 +10,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -25,9 +26,14 @@ public class PaintController implements VistaContainable {
     private Brushstroke bs;
     private GraphicsContext gc;
     private ServerConnection connection;
+    private Image prevImage;
 
     public GraphicsContext getGraphicsContext() {
         return gc;
+    }
+
+    public Canvas getCanvas() {
+        return canvas;
     }
 
     public PaintController(VistaContainer parent, ServerConnection connection){
@@ -50,10 +56,20 @@ public class PaintController implements VistaContainable {
     @Override
     public void init() {
         gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
         canvas.setOnMousePressed(e -> {
-            System.out.println("pressed");
-            bs = new Brushstroke((int)e.getX(), (int)e.getY(), new SerializableColor(colorPicker.getValue()), Double.parseDouble(brushSize.getText()));
+            //System.out.println("pressed");
+            prevImage = canvas.snapshot(null, null);
+
+            Color c;
+            if(eraser.isSelected())
+                c = Color.WHITE;
+            else
+                c = colorPicker.getValue();
+
+            bs = new Brushstroke((int)e.getX(), (int)e.getY(), new SerializableColor(c), Double.parseDouble(brushSize.getText()));
 
             double size = Double.parseDouble(brushSize.getText());
             double x = e.getX() - size / 2;
@@ -68,30 +84,27 @@ public class PaintController implements VistaContainable {
         });
 
         canvas.setOnMouseDragged(e -> {
-            System.out.println("test " + e.getX() + " " + e.getY());
+            //System.out.println("test " + e.getX() + " " + e.getY());
             bs.pushPoint((int)e.getX(), (int)e.getY());
 
             double size = Double.parseDouble(brushSize.getText());
             double x = e.getX() - size / 2;
             double y = e.getY() - size / 2;
 
-            if (eraser.isSelected()) {
-                gc.clearRect(x, y, size, size);
-            } else {
-                gc.setFill(colorPicker.getValue());
-                gc.fillRect(x, y, size, size);
-            }
+
+            gc.setFill(colorPicker.getValue());
+            gc.fillRect(x, y, size, size);
         });
 
         canvas.setOnMouseReleased(e -> {
-            System.out.println("released");
+            //System.out.println("released");
             try {
+                //gc.drawImage(prevImage, 0, 0);
                 connection.sendBrushstroke(bs);
             } catch (IOException ex) {
                 // TODO Auto-generated catch block
                 ex.printStackTrace();
             }
-            //bs.recreate(gc);
         });
 
         System.out.println(canvas.getWidth() + " " + canvas.getHeight());
