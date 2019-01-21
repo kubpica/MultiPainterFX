@@ -1,6 +1,5 @@
 package pl.jpranica.multipainterfx;
 
-import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
 
 import java.util.LinkedList;
