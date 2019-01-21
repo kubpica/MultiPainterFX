@@ -1,6 +1,8 @@
 package pl.jpranica.multipainterfx;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +17,6 @@ import javafx.scene.paint.Color;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 
 public class PaintController implements VistaContainable {
     @FXML private Canvas canvas;
@@ -38,7 +39,6 @@ public class PaintController implements VistaContainable {
 
     public PaintController(VistaContainer parent, ServerConnection connection){
         this.connection = connection;
-        this.parent = parent;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_PAINT));
         loader.setController(this);
         try {
@@ -46,22 +46,30 @@ public class PaintController implements VistaContainable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.init();
+        this.init(parent);
     }
 
-    @Override
-    public void setParent(VistaContainer parent) {
+     @Override
+    public void init(VistaContainer parent) {
         this.parent = parent;
-    }
-    @Override
-    public void init() {
+
+        brushSize.textProperty().addListener(new ChangeListener<String>() {
+             @Override
+             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                 if (!newValue.matches("\\d*")) {
+                     brushSize.setText(newValue.replaceAll("[^\\d]", ""));
+                 }
+             }
+        });
+
+        colorPicker.setValue(Color.RED);
+
         gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
         canvas.setOnMousePressed(e -> {
             //System.out.println("pressed");
-            prevImage = canvas.snapshot(null, null);
 
             Color c;
             if(eraser.isSelected())
@@ -75,12 +83,9 @@ public class PaintController implements VistaContainable {
             double x = e.getX() - size / 2;
             double y = e.getY() - size / 2;
 
-            if (eraser.isSelected()) {
-                gc.clearRect(x, y, size, size);
-            } else {
-                gc.setFill(colorPicker.getValue());
-                gc.fillRect(x, y, size, size);
-            }
+
+            gc.setFill(colorPicker.getValue());
+            gc.fillRect(x, y, size, size);
         });
 
         canvas.setOnMouseDragged(e -> {
@@ -91,15 +96,19 @@ public class PaintController implements VistaContainable {
             double x = e.getX() - size / 2;
             double y = e.getY() - size / 2;
 
+            Color c;
+            if(eraser.isSelected())
+                c = Color.WHITE;
+            else
+                c = colorPicker.getValue();
 
-            gc.setFill(colorPicker.getValue());
+            gc.setFill(c);
             gc.fillRect(x, y, size, size);
         });
 
         canvas.setOnMouseReleased(e -> {
             //System.out.println("released");
             try {
-                //gc.drawImage(prevImage, 0, 0);
                 connection.sendBrushstroke(bs);
             } catch (IOException ex) {
                 // TODO Auto-generated catch block

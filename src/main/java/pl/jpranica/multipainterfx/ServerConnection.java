@@ -1,9 +1,9 @@
 package pl.jpranica.multipainterfx;
 
-import javax.sql.rowset.CachedRowSet;
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class ServerConnection {
 	private Socket socket = null;

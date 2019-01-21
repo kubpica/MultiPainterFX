@@ -11,15 +11,17 @@ public class ChronologicalCanvas {
     private Canvas canvas;
     private int toFullRip;
     private int withoutFullRip;
+    private CanvasHistoricalPoint clear;
 
     public ChronologicalCanvas(Canvas c){
-        this(c, 10);
+        this(c, 10000);
     }
 
     public ChronologicalCanvas(Canvas c, int toFullRip){
         this.canvas = c;
         this.toFullRip = toFullRip;
         this.history = new LinkedList<>();
+        this.clear = new CanvasRip(canvas);
     }
 
     public void paint(Brushstroke bs){
@@ -36,7 +38,14 @@ public class ChronologicalCanvas {
             if (elementInList.compareTo(bs) > 0) {
                 itr.previous();
                 itr.add(bs);
-                while(!itr.previous().isFullRip());
+                while(true){
+                    if(!itr.hasPrevious()){
+                        clear.recreate(canvas.getGraphicsContext2D());
+                        break;
+                    }else if(itr.previous().isFullRip()){
+                        break;
+                    }
+                }
                 itr.next().recreate(canvas.getGraphicsContext2D());
                 while(itr.hasNext()){
                     CanvasHistoricalPoint p = itr.next();
@@ -52,11 +61,7 @@ public class ChronologicalCanvas {
 
         withoutFullRip++;
         if(withoutFullRip>=toFullRip){
-            Platform.runLater(new Runnable() {
-                @Override public void run() {
-                    itr.add(new CanvasRip(canvas));
-                }
-            });
+            itr.add(new CanvasRip(canvas));
             withoutFullRip = 0;
         }
     }

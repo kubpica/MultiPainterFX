@@ -1,14 +1,12 @@
 package pl.jpranica.multipainterfx;
 
-import javafx.collections.transformation.SortedList;
-
-import java.awt.*;
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.net.Socket;
-import java.util.Comparator;
 
 //
-public class RemoteCanvasThread extends Thread{
+public class RemoteCanvasThread implements Runnable{
 	private ServerConnection connection;
 	private PaintController pc;
 	private ChronologicalCanvas canvas;
@@ -19,6 +17,7 @@ public class RemoteCanvasThread extends Thread{
 		this.canvas = new ChronologicalCanvas(pc.getCanvas());
 	}
 
+	@Override
 	public void run() {
 		try {
 			Socket socket = connection.getSocket();

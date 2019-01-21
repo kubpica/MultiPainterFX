@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class Server extends Thread {
 	private int serverPort;
 	private ArrayList<ServerConnection> connections = new ArrayList<>();
-	private LinkedList<CanvasHistoricalPoint> history = new LinkedList<>();
+	private LinkedList<Brushstroke> history = new LinkedList<>();
 
     public Server() {
         this(4545);
@@ -34,13 +34,13 @@ public class Server extends Thread {
         }
     }
 
-	public void addToHistory(CanvasHistoricalPoint point){
+	public void addToHistory(Brushstroke point){
 	    history.add(point);
     }
 
     public void resendHistory(ServerConnection connection) throws IOException{
-        for(CanvasHistoricalPoint point : history){
-            connection.sendPoint(point);
+        for(Brushstroke point : history){
+            connection.sendBrushstroke(point);
         }
     }
 
@@ -59,7 +59,7 @@ public class Server extends Thread {
 			Socket socket = serverSocket.accept();
 			System.out.println("New connection");
 			ServerConnection sc = new ServerConnection(socket);
-			new ServerThread(this, sc).start();
+			new Thread(new ServerThread(this, sc)).start();
 			connections.add(sc);
 		}
 	}

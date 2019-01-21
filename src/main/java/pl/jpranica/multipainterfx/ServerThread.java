@@ -1,11 +1,12 @@
 package pl.jpranica.multipainterfx;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.time.Instant;
-import java.util.LinkedList;
 
-public class ServerThread extends Thread{
+public class ServerThread implements Runnable{
 	private Server server;
 	private ServerConnection connection;
 
@@ -14,6 +15,7 @@ public class ServerThread extends Thread{
 		this.connection = connection;
 	}
 
+	@Override
 	public void run() {
 		try {
 			Socket socket = connection.getSocket();

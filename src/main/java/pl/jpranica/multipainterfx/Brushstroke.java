@@ -1,11 +1,9 @@
 package pl.jpranica.multipainterfx;
 
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Paint;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.time.ZonedDateTime;
 import java.util.LinkedList;
 
 class Position implements Serializable {
@@ -70,5 +68,10 @@ public class Brushstroke implements Serializable, CanvasHistoricalPoint {
             y += p.getY();
             g.fillRect(x, y, size, size);
         }
+    }
+
+    @Override
+    public boolean isFullRip(){
+        return false;
     }
 }

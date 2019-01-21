@@ -42,8 +42,7 @@ public class VistaNavigator {
             vc.setVista( loader.load() );
 
             VistaContainable child = loader.getController();
-            child.setParent(vc);
-            child.init();
+            child.init(vc);
         } catch (IOException e) {
             e.printStackTrace();
         }

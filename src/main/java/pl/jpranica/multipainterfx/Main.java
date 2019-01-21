@@ -12,10 +12,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        /*stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(VistaNavigator.VISTA_PAINT))));
-        stage.setTitle("Paint App");
-        stage.show();*/
-
         stage.setTitle("MultiPainterFX");
 
         stage.setScene(
@@ -45,7 +41,6 @@ public class Main extends Application {
         );
 
         MainController mainController = loader.getController();
-        mainController.init();
 
         return mainPane;
     }

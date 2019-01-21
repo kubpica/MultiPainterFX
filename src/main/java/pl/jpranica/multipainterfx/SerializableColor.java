@@ -1,7 +1,8 @@
 package pl.jpranica.multipainterfx;
 
-import java.io.Serializable;
 import javafx.scene.paint.Color;
+
+import java.io.Serializable;
 public class SerializableColor implements Serializable
 {
     private double red;

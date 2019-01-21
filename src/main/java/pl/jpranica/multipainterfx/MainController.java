@@ -7,111 +7,67 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TitledPane;
-import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 
-import javax.imageio.ImageIO;
-import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Main controller class for the entire layout.
  */
 public class MainController extends VistaContainer {
     @FXML
-    private ListView<String> lvLocalCanvas;
-    @FXML
-    private ListView<String> lvRemoteCanvas;
-    @FXML
-    private TitledPane tpLocalCanvas;
-    @FXML
-    private TitledPane tpRemoteCanvas;
-    @FXML
     private TabPane tbpane;
 
-    public void init(){
-        tpLocalCanvas.expandedProperty().addListener(new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                if(tpLocalCanvas.isExpanded()){
-                    ObservableList<String> ols = FXCollections.observableArrayList();
-                    ols.add("** Dodaj **");
-                    ols.add("Płótno");
-                    lvLocalCanvas.setItems(ols);
-                }else {
-                    lvLocalCanvas.getSelectionModel().clearSelection();
-                }
+    @FXML
+    private void onHost(){
+        try {
+            //Start server
+            Server server = Dialogs.host();
+            if(server==null){
+                Dialogs.error("Wprowadzono niepoprawne dane!");
+                return;
             }
-        });
 
-        lvLocalCanvas.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                String s = lvLocalCanvas.getSelectionModel().getSelectedItem();
-                if(s==null)
-                    return;
+            server.start();
 
-                TabController tabCtrl = new TabController(s);
-                tbpane.getTabs().add(tabCtrl.getTab());
+            //Connect
+            ServerConnection sc = new ServerConnection( new Socket("localhost", server.getServerPort()) );
+            TabController tabCtrl = new TabController("Lokalne płótno");
+            tbpane.getTabs().add(tabCtrl.getTab());
+            PaintController pc = new PaintController(tabCtrl, sc);
+            new Thread(new RemoteCanvasThread(sc, pc)).start();
 
-                if(s=="** Dodaj **"){
-                    try {
-                        //Start server
-                        Server server = Dialogs.host();
-                        server.start();
+        } catch (IOException e) {
+            Dialogs.error("Nie udało się postawić płótna.");
+            e.printStackTrace();
+        }
+    }
 
-                        //Connect
-                        ServerConnection sc = new ServerConnection( new Socket("localhost", server.getServerPort()) );
-                        PaintController pc = new PaintController(tabCtrl, sc);
-                        new RemoteCanvasThread(sc, pc).start();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
+    @FXML
+    private void onConnect(){
+        try {
+            ServerConnection sc = Dialogs.connect();
+            if(sc==null){
+                Dialogs.error("Wprowadzono niepoprawne dane!");
+                return;
             }
-        });
-
-        tpRemoteCanvas.expandedProperty().addListener(new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                if(tpRemoteCanvas.isExpanded()){
-                    ObservableList<String> ols = FXCollections.observableArrayList();
-                    ols.add("** Dodaj **");
-                    ols.add("Płótno");
-                    lvRemoteCanvas.setItems(ols);
-                }else {
-                    lvRemoteCanvas.getSelectionModel().clearSelection();
-                }
-            }
-        });
-
-        lvRemoteCanvas.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                String s = lvRemoteCanvas.getSelectionModel().getSelectedItem();
-                if(s==null)
-                    return;
-
-                TabController tabCtrl = new TabController(s);
-                tbpane.getTabs().add(tabCtrl.getTab());
-
-                if(s=="** Dodaj **"){
-                    ServerConnection sc = Dialogs.connect();
-                    PaintController pc = new PaintController(tabCtrl, sc);
-                    new RemoteCanvasThread(sc, pc).start();
-                }
-
-            }
-        });
+            TabController tabCtrl = new TabController("Zdalne płótno");
+            PaintController pc = new PaintController(tabCtrl, sc);
+            tbpane.getTabs().add(tabCtrl.getTab());
+            new Thread(new RemoteCanvasThread(sc, pc)).start();
+        } catch (Exception e) {
+            Dialogs.error("Nie udało się połaczyć.");
+            e.printStackTrace();
+        }
     }
 
     /** Holder of a switchable vista. */

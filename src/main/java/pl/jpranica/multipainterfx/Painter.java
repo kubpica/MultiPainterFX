@@ -27,7 +27,6 @@ public class Painter extends JProApplication
         {
             Parent root = loader.load();
             MainController controller = loader.getController();
-            controller.init();
 
             //create JavaFX scene
             scene = new Scene(root);

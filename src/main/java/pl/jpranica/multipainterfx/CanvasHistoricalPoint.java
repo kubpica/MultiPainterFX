@@ -8,9 +8,7 @@ public interface CanvasHistoricalPoint extends Comparable<CanvasHistoricalPoint>
     void recreate(GraphicsContext g);
     Instant getDate();
 
-    default boolean isFullRip() {
-        return false;
-    }
+    boolean isFullRip();
 
     @Override
     default int compareTo(CanvasHistoricalPoint o) {
