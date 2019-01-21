@@ -10,13 +10,12 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="750.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.jpranica.multipainterfx.MainController">
+<BorderPane prefHeight="650.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.jpranica.multipainterfx.MainController">
 <top>
     <MenuBar>
         <Menu text="Plik">
             <MenuItem onAction="#onHost" text="Postaw płótno" />
             <MenuItem onAction="#onConnect" text="Połącz ze zdalnym płótnem" />
-            <MenuItem onAction="#onSave" text="Zapisz do bazy danych" />
             <MenuItem onAction="#closeAppAction" text="Wyjdź" />
         </Menu>
     </MenuBar>
