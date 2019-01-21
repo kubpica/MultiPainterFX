@@ -30,6 +30,7 @@ import java.util.List;
 public class MainController extends VistaContainer {
     @FXML
     private TabPane tbpane;
+    private List<PaintController> canvases = new ArrayList<>();
 
     @FXML
     private void onHost(){
@@ -48,6 +49,7 @@ public class MainController extends VistaContainer {
             TabController tabCtrl = new TabController("Lokalne płótno");
             tbpane.getTabs().add(tabCtrl.getTab());
             PaintController pc = new PaintController(tabCtrl, sc);
+            canvases.add(pc);
             new Thread(new RemoteCanvasThread(sc, pc)).start();
 
         } catch (IOException e) {
@@ -94,13 +96,16 @@ public class MainController extends VistaContainer {
 
     @FXML
     public void onSave() {
-        /*try {
-            //tbpane.getSelectionModel().getSelectedItem()
-            Image snapshot = canvas.snapshot(null, null);
+        try {
+            int i = 1;
+            for(PaintController canvas : canvases) {
+                Image snapshot = canvas.getCanvas().snapshot(null, null);
 
-            ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", new File("paint.png"));
+                ImageIO.write(SwingFXUtils.fromFXImage(snapshot, null), "png", new File("paint" + i + ".png"));
+                i++;
+            }
         } catch (Exception e) {
             System.out.println("Failed to save image: " + e);
-        }*/
+        }
     }
 }

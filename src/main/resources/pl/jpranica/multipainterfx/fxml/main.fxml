@@ -16,6 +16,7 @@
         <Menu text="Plik">
             <MenuItem onAction="#onHost" text="Postaw płótno" />
             <MenuItem onAction="#onConnect" text="Połącz ze zdalnym płótnem" />
+            <MenuItem onAction="#onSave" text="Zapisz" />
             <MenuItem onAction="#closeAppAction" text="Wyjdź" />
         </Menu>
     </MenuBar>
@@ -26,7 +27,7 @@
             <children>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="431.0">
                     <children>
-                        <TabPane fx:id="tbpane" layoutY="-2.0" prefHeight="375.0" prefWidth="390.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-2.0">
+                        <TabPane fx:id="tbpane" layoutY="-2.0" prefHeight="375.0" prefWidth="390.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-2.0">
                             <tabs>
                             </tabs>
                         </TabPane>
